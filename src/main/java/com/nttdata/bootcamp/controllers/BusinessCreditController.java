@@ -43,7 +43,7 @@ public class BusinessCreditController {
 			b.setAccountingBalance(businessCredit.getAccountingBalance());
 			b.setAvailableBalance(businessCredit.getAvailableBalance());
 			log.info("a BusinessCredit was updated");
-			return Mono.just(b);
+			return bcrepo.save(b);
 		});
 	}
 	
