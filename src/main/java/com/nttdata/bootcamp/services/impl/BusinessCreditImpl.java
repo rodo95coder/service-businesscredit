@@ -15,7 +15,6 @@ public class BusinessCreditImpl implements IBusinessCreditService {
 	
 	@Autowired
 	IBusinessCreditRepo bcrepo;
-	
 
 	@Override
 	public Flux<BusinessCredit> findAll() {
@@ -40,6 +39,11 @@ public class BusinessCreditImpl implements IBusinessCreditService {
 	@Override
 	public Mono<Long> count() {
 		return bcrepo.count();
+	}
+
+	@Override
+	public Flux<BusinessCredit> findByIdCustomerEnterprise(String idCustomer) {
+		return bcrepo.findByIdCustomerEnterprise(idCustomer);
 	}
 
 }

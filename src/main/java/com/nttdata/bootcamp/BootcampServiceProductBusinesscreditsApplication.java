@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 
 import com.nttdata.bootcamp.models.BusinessCredit;
@@ -12,6 +13,7 @@ import com.nttdata.bootcamp.repositories.IBusinessCreditRepo;
 import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 
+@EnableEurekaClient
 @Slf4j
 @SpringBootApplication
 public class BootcampServiceProductBusinesscreditsApplication implements CommandLineRunner{

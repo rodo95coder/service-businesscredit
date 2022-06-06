@@ -58,5 +58,11 @@ public class BusinessCreditController {
 		log.info("a BusinessCredit was deleted");
 		return bcrepo.delete(businessCredit);
 	}
+	
+	@GetMapping("/findByIdCustomerEnterprise/{idCustomer}")
+	public Flux<BusinessCredit> findByIdCustomer(@PathVariable String idCustomer){
+		log.info("all BusinessCredits by id customer  were consulted");
+		return bcrepo.findByIdCustomerEnterprise(idCustomer);
+	}
 
 }

@@ -11,4 +11,5 @@ public interface IBusinessCreditService {
 	public Mono<BusinessCredit> save(BusinessCredit businessCredit);
 	public Mono<Void> delete(BusinessCredit businessCredit);
 	public Mono<Long> count();
+	public Flux<BusinessCredit> findByIdCustomerEnterprise(String idCustomer);
 }
